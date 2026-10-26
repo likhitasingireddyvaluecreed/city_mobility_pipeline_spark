@@ -1,0 +1,182 @@
+[
+  {
+    "dataset": "bikes",
+    "check": "missing_values",
+    "column": "purchase_year",
+    "count": 37,
+    "details": "Null, blank or recognized placeholder values."
+  },
+  {
+    "dataset": "bikes",
+    "check": "inconsistent_category_format",
+    "column": "bike_type",
+    "count": 1,
+    "details": "Different raw values share the same trimmed, lowercase representation."
+  },
+  {
+    "dataset": "bikes",
+    "check": "inconsistent_category_format",
+    "column": "status",
+    "count": 1,
+    "details": "Different raw values share the same trimmed, lowercase representation."
+  },
+  {
+    "dataset": "bikes",
+    "column": "purchase_year",
+    "issue": "missing_value",
+    "count": 37,
+    "rules": {
+      "max": 2026
+    }
+  },
+  {
+    "dataset": "users",
+    "check": "missing_values",
+    "column": "home_district",
+    "count": 456,
+    "details": "Null, blank or recognized placeholder values."
+  },
+  {
+    "dataset": "users",
+    "check": "inconsistent_category_format",
+    "column": "membership",
+    "count": 1,
+    "details": "Different raw values share the same trimmed, lowercase representation."
+  },
+  {
+    "dataset": "trips",
+    "check": "missing_values",
+    "column": "user_id",
+    "count": 1,
+    "details": "Null, blank or recognized placeholder values."
+  },
+  {
+    "dataset": "trips",
+    "check": "missing_values",
+    "column": "duration_minutes",
+    "count": 30,
+    "details": "Null, blank or recognized placeholder values."
+  },
+  {
+    "dataset": "trips",
+    "check": "duplicate_rows",
+    "column": null,
+    "count": 3,
+    "details": "Number of extra copies of identical full rows."
+  },
+  {
+    "dataset": "trips",
+    "check": "duplicate_key",
+    "column": "trip_id",
+    "count": 3,
+    "details": "Number of key values that occur more than once."
+  },
+  {
+    "dataset": "trips",
+    "check": "inconsistent_category_format",
+    "column": "trip_status",
+    "count": 1,
+    "details": "Different raw values share the same trimmed, lowercase representation."
+  },
+  {
+    "dataset": "trips",
+    "column": "duration_minutes",
+    "issue": "missing_value",
+    "count": 30,
+    "rules": {
+      "min": 0
+    }
+  },
+  {
+    "dataset": "trips",
+    "column": "duration_minutes",
+    "issue": "malformed_numeric_value",
+    "count": 33,
+    "rules": {
+      "min": 0
+    }
+  },
+  {
+    "dataset": "trips",
+    "column": "duration_minutes",
+    "issue": "numeric_value_out_of_range",
+    "count": 1,
+    "rules": {
+      "min": 0
+    }
+  },
+  {
+    "dataset": "trips",
+    "check": "malformed_timestamp",
+    "column": "start_time",
+    "count": 1,
+    "details": "A non-empty timestamp could not be parsed."
+  },
+  {
+    "dataset": "trips",
+    "check": "duration_timestamp_mismatch",
+    "column": "duration_minutes",
+    "count": 1,
+    "details": "Recorded duration differs from timestamp-derived duration by more than one minute."
+  },
+  {
+    "dataset": "maintenance",
+    "check": "missing_values",
+    "column": "reported_at",
+    "count": 1,
+    "details": "Null, blank or recognized placeholder values."
+  },
+  {
+    "dataset": "maintenance",
+    "check": "missing_values",
+    "column": "repair_minutes",
+    "count": 5,
+    "details": "Null, blank or recognized placeholder values."
+  },
+  {
+    "dataset": "maintenance",
+    "check": "missing_values",
+    "column": "resolution",
+    "count": 64,
+    "details": "Null, blank or recognized placeholder values."
+  },
+  {
+    "dataset": "maintenance",
+    "check": "inconsistent_category_format",
+    "column": "resolution",
+    "count": 1,
+    "details": "Different raw values share the same trimmed, lowercase representation."
+  },
+  {
+    "dataset": "maintenance",
+    "column": "repair_minutes",
+    "issue": "missing_value",
+    "count": 5,
+    "rules": {
+      "min": 0
+    }
+  },
+  {
+    "dataset": "maintenance",
+    "column": "repair_minutes",
+    "issue": "malformed_numeric_value",
+    "count": 4,
+    "rules": {
+      "min": 0
+    }
+  },
+  {
+    "dataset": "trips",
+    "check": "unmatched_reference",
+    "column": "start_station_id",
+    "count": 1,
+    "details": "Some values do not exist in stations.station_id."
+  },
+  {
+    "dataset": "maintenance",
+    "check": "unmatched_reference",
+    "column": "bike_id",
+    "count": 1,
+    "details": "Some values do not exist in bikes.bike_id."
+  }
+]

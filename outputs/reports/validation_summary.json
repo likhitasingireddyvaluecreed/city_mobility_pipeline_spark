@@ -1,0 +1,32 @@
+{
+  "stations": {
+    "dataset": "stations",
+    "input_rows": 8,
+    "clean_rows": 8,
+    "quarantined_rows": 0
+  },
+  "bikes": {
+    "dataset": "bikes",
+    "input_rows": 250,
+    "clean_rows": 213,
+    "quarantined_rows": 37
+  },
+  "users": {
+    "dataset": "users",
+    "input_rows": 1600,
+    "clean_rows": 1600,
+    "quarantined_rows": 0
+  },
+  "trips": {
+    "dataset": "trips",
+    "input_rows": 4203,
+    "clean_rows": 4130,
+    "quarantined_rows": 73
+  },
+  "maintenance": {
+    "dataset": "maintenance",
+    "input_rows": 300,
+    "clean_rows": 289,
+    "quarantined_rows": 11
+  }
+}

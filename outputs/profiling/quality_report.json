@@ -1,0 +1,612 @@
+{
+  "datasets": {
+    "stations": {
+      "row_count": 8,
+      "column_count": 4,
+      "columns": [
+        "station_id",
+        "station_name",
+        "district",
+        "capacity"
+      ],
+      "schema": "struct<station_id:string,station_name:string,district:string,capacity:string>",
+      "missing_values": {
+        "station_id": 0,
+        "station_name": 0,
+        "district": 0,
+        "capacity": 0
+      },
+      "duplicate_extra_rows": 0,
+      "duplicate_key_values": 0,
+      "key_column": "station_id",
+      "categories": {
+        "district": [
+          {
+            "value": "Central",
+            "count": 2
+          },
+          {
+            "value": "East",
+            "count": 2
+          },
+          {
+            "value": "North",
+            "count": 2
+          },
+          {
+            "value": "South",
+            "count": 1
+          },
+          {
+            "value": "West",
+            "count": 1
+          }
+        ]
+      },
+      "numeric_columns": {
+        "capacity": {
+          "row_count": 8,
+          "missing_like_count": 0,
+          "malformed_count": 0,
+          "non_integer_count": 0,
+          "out_of_range_count": 0,
+          "parsed_numeric_count": 8,
+          "minimum": 16.0,
+          "maximum": 40.0,
+          "average": 26.625,
+          "median": 24.0,
+          "p90": 40.0,
+          "p95": 40.0,
+          "p99": 40.0
+        }
+      },
+      "timestamps": {}
+    },
+    "bikes": {
+      "row_count": 250,
+      "column_count": 4,
+      "columns": [
+        "bike_id",
+        "bike_type",
+        "purchase_year",
+        "status"
+      ],
+      "schema": "struct<bike_id:string,bike_type:string,purchase_year:string,status:string>",
+      "missing_values": {
+        "bike_id": 0,
+        "bike_type": 0,
+        "purchase_year": 37,
+        "status": 0
+      },
+      "duplicate_extra_rows": 0,
+      "duplicate_key_values": 0,
+      "key_column": "bike_id",
+      "categories": {
+        "bike_type": [
+          {
+            "value": "electric",
+            "count": 57
+          },
+          {
+            "value": "standard",
+            "count": 53
+          },
+          {
+            "value": "e-bike",
+            "count": 48
+          },
+          {
+            "value": "Standard",
+            "count": 48
+          },
+          {
+            "value": "cargo",
+            "count": 44
+          }
+        ],
+        "status": [
+          {
+            "value": "active",
+            "count": 96
+          },
+          {
+            "value": "ACTIVE",
+            "count": 58
+          },
+          {
+            "value": "maintenance",
+            "count": 50
+          },
+          {
+            "value": "retired",
+            "count": 46
+          }
+        ]
+      },
+      "numeric_columns": {
+        "purchase_year": {
+          "row_count": 250,
+          "missing_like_count": 37,
+          "malformed_count": 0,
+          "non_integer_count": 0,
+          "out_of_range_count": 0,
+          "parsed_numeric_count": 213,
+          "minimum": 2021.0,
+          "maximum": 2025.0,
+          "average": 2023.1267605633802,
+          "median": 2023.0,
+          "p90": 2025.0,
+          "p95": 2025.0,
+          "p99": 2025.0
+        }
+      },
+      "timestamps": {}
+    },
+    "users": {
+      "row_count": 1600,
+      "column_count": 4,
+      "columns": [
+        "user_id",
+        "membership",
+        "signup_date",
+        "home_district"
+      ],
+      "schema": "struct<user_id:string,membership:string,signup_date:string,home_district:string>",
+      "missing_values": {
+        "user_id": 0,
+        "membership": 0,
+        "signup_date": 0,
+        "home_district": 456
+      },
+      "duplicate_extra_rows": 0,
+      "duplicate_key_values": 0,
+      "key_column": "user_id",
+      "categories": {
+        "membership": [
+          {
+            "value": "student",
+            "count": 341
+          },
+          {
+            "value": "casual",
+            "count": 330
+          },
+          {
+            "value": "Annual",
+            "count": 324
+          },
+          {
+            "value": "monthly",
+            "count": 309
+          },
+          {
+            "value": "annual",
+            "count": 296
+          }
+        ],
+        "home_district": [
+          {
+            "value": null,
+            "count": 456
+          },
+          {
+            "value": "West",
+            "count": 272
+          },
+          {
+            "value": "North",
+            "count": 228
+          },
+          {
+            "value": "Central",
+            "count": 224
+          },
+          {
+            "value": "South",
+            "count": 216
+          },
+          {
+            "value": "East",
+            "count": 204
+          }
+        ]
+      },
+      "numeric_columns": {},
+      "timestamps": {}
+    },
+    "trips": {
+      "row_count": 4203,
+      "column_count": 9,
+      "columns": [
+        "trip_id",
+        "user_id",
+        "bike_id",
+        "start_station_id",
+        "end_station_id",
+        "start_time",
+        "end_time",
+        "duration_minutes",
+        "trip_status"
+      ],
+      "schema": "struct<trip_id:string,user_id:string,bike_id:string,start_station_id:string,end_station_id:string,start_time:string,end_time:string,duration_minutes:string,trip_status:string>",
+      "missing_values": {
+        "trip_id": 0,
+        "user_id": 1,
+        "bike_id": 0,
+        "start_station_id": 0,
+        "end_station_id": 0,
+        "start_time": 0,
+        "end_time": 0,
+        "duration_minutes": 30,
+        "trip_status": 0
+      },
+      "duplicate_extra_rows": 3,
+      "duplicate_key_values": 3,
+      "key_column": "trip_id",
+      "categories": {
+        "trip_status": [
+          {
+            "value": "completed",
+            "count": 1683
+          },
+          {
+            "value": "Completed",
+            "count": 859
+          },
+          {
+            "value": "in_progress",
+            "count": 847
+          },
+          {
+            "value": "cancelled",
+            "count": 814
+          }
+        ]
+      },
+      "numeric_columns": {
+        "duration_minutes": {
+          "row_count": 4203,
+          "missing_like_count": 30,
+          "malformed_count": 33,
+          "non_integer_count": 0,
+          "out_of_range_count": 1,
+          "parsed_numeric_count": 4140,
+          "minimum": -8.0,
+          "maximum": 700.0,
+          "average": 204.30628019323672,
+          "median": 108.0,
+          "p90": 568.0,
+          "p95": 634.0,
+          "p99": 691.0
+        }
+      },
+      "timestamps": {
+        "start_time": {
+          "missing_count": 0,
+          "malformed_count": 1
+        },
+        "end_time": {
+          "missing_count": 0,
+          "malformed_count": 0
+        },
+        "duration_timestamp_comparison": {
+          "mismatch_count": 1,
+          "end_before_start_count": 0,
+          "comparison_tolerance_minutes": 1
+        }
+      }
+    },
+    "maintenance": {
+      "row_count": 300,
+      "column_count": 6,
+      "columns": [
+        "maintenance_id",
+        "bike_id",
+        "reported_at",
+        "issue_type",
+        "repair_minutes",
+        "resolution"
+      ],
+      "schema": "struct<maintenance_id:string,bike_id:string,reported_at:string,issue_type:string,repair_minutes:string,resolution:string>",
+      "missing_values": {
+        "maintenance_id": 0,
+        "bike_id": 0,
+        "reported_at": 1,
+        "issue_type": 0,
+        "repair_minutes": 5,
+        "resolution": 64
+      },
+      "duplicate_extra_rows": 0,
+      "duplicate_key_values": 0,
+      "key_column": "maintenance_id",
+      "categories": {
+        "issue_type": [
+          {
+            "value": "vandalism",
+            "count": 60
+          },
+          {
+            "value": "flat_tire",
+            "count": 54
+          },
+          {
+            "value": "chain",
+            "count": 52
+          },
+          {
+            "value": "other",
+            "count": 48
+          },
+          {
+            "value": "brake",
+            "count": 45
+          },
+          {
+            "value": "battery",
+            "count": 41
+          }
+        ],
+        "resolution": [
+          {
+            "value": null,
+            "count": 64
+          },
+          {
+            "value": "fixed",
+            "count": 63
+          },
+          {
+            "value": "pending",
+            "count": 62
+          },
+          {
+            "value": "FIXED",
+            "count": 60
+          },
+          {
+            "value": "replaced",
+            "count": 51
+          }
+        ]
+      },
+      "numeric_columns": {
+        "repair_minutes": {
+          "row_count": 300,
+          "missing_like_count": 5,
+          "malformed_count": 4,
+          "non_integer_count": 0,
+          "out_of_range_count": 0,
+          "parsed_numeric_count": 291,
+          "minimum": 11.0,
+          "maximum": 240.0,
+          "average": 123.91065292096219,
+          "median": 125.0,
+          "p90": 212.0,
+          "p95": 227.0,
+          "p99": 238.0
+        }
+      },
+      "timestamps": {}
+    }
+  },
+  "references": [
+    {
+      "child_dataset": "trips",
+      "child_column": "user_id",
+      "parent_dataset": "users",
+      "parent_column": "user_id",
+      "unmatched_count": 0
+    },
+    {
+      "child_dataset": "trips",
+      "child_column": "bike_id",
+      "parent_dataset": "bikes",
+      "parent_column": "bike_id",
+      "unmatched_count": 0
+    },
+    {
+      "child_dataset": "trips",
+      "child_column": "start_station_id",
+      "parent_dataset": "stations",
+      "parent_column": "station_id",
+      "unmatched_count": 1
+    },
+    {
+      "child_dataset": "trips",
+      "child_column": "end_station_id",
+      "parent_dataset": "stations",
+      "parent_column": "station_id",
+      "unmatched_count": 0
+    },
+    {
+      "child_dataset": "maintenance",
+      "child_column": "bike_id",
+      "parent_dataset": "bikes",
+      "parent_column": "bike_id",
+      "unmatched_count": 1
+    }
+  ],
+  "findings_count": 24,
+  "findings": [
+    {
+      "dataset": "bikes",
+      "check": "missing_values",
+      "column": "purchase_year",
+      "count": 37,
+      "details": "Null, blank or recognized placeholder values."
+    },
+    {
+      "dataset": "bikes",
+      "check": "inconsistent_category_format",
+      "column": "bike_type",
+      "count": 1,
+      "details": "Different raw values share the same trimmed, lowercase representation."
+    },
+    {
+      "dataset": "bikes",
+      "check": "inconsistent_category_format",
+      "column": "status",
+      "count": 1,
+      "details": "Different raw values share the same trimmed, lowercase representation."
+    },
+    {
+      "dataset": "bikes",
+      "column": "purchase_year",
+      "issue": "missing_value",
+      "count": 37,
+      "rules": {
+        "max": 2026
+      }
+    },
+    {
+      "dataset": "users",
+      "check": "missing_values",
+      "column": "home_district",
+      "count": 456,
+      "details": "Null, blank or recognized placeholder values."
+    },
+    {
+      "dataset": "users",
+      "check": "inconsistent_category_format",
+      "column": "membership",
+      "count": 1,
+      "details": "Different raw values share the same trimmed, lowercase representation."
+    },
+    {
+      "dataset": "trips",
+      "check": "missing_values",
+      "column": "user_id",
+      "count": 1,
+      "details": "Null, blank or recognized placeholder values."
+    },
+    {
+      "dataset": "trips",
+      "check": "missing_values",
+      "column": "duration_minutes",
+      "count": 30,
+      "details": "Null, blank or recognized placeholder values."
+    },
+    {
+      "dataset": "trips",
+      "check": "duplicate_rows",
+      "column": null,
+      "count": 3,
+      "details": "Number of extra copies of identical full rows."
+    },
+    {
+      "dataset": "trips",
+      "check": "duplicate_key",
+      "column": "trip_id",
+      "count": 3,
+      "details": "Number of key values that occur more than once."
+    },
+    {
+      "dataset": "trips",
+      "check": "inconsistent_category_format",
+      "column": "trip_status",
+      "count": 1,
+      "details": "Different raw values share the same trimmed, lowercase representation."
+    },
+    {
+      "dataset": "trips",
+      "column": "duration_minutes",
+      "issue": "missing_value",
+      "count": 30,
+      "rules": {
+        "min": 0
+      }
+    },
+    {
+      "dataset": "trips",
+      "column": "duration_minutes",
+      "issue": "malformed_numeric_value",
+      "count": 33,
+      "rules": {
+        "min": 0
+      }
+    },
+    {
+      "dataset": "trips",
+      "column": "duration_minutes",
+      "issue": "numeric_value_out_of_range",
+      "count": 1,
+      "rules": {
+        "min": 0
+      }
+    },
+    {
+      "dataset": "trips",
+      "check": "malformed_timestamp",
+      "column": "start_time",
+      "count": 1,
+      "details": "A non-empty timestamp could not be parsed."
+    },
+    {
+      "dataset": "trips",
+      "check": "duration_timestamp_mismatch",
+      "column": "duration_minutes",
+      "count": 1,
+      "details": "Recorded duration differs from timestamp-derived duration by more than one minute."
+    },
+    {
+      "dataset": "maintenance",
+      "check": "missing_values",
+      "column": "reported_at",
+      "count": 1,
+      "details": "Null, blank or recognized placeholder values."
+    },
+    {
+      "dataset": "maintenance",
+      "check": "missing_values",
+      "column": "repair_minutes",
+      "count": 5,
+      "details": "Null, blank or recognized placeholder values."
+    },
+    {
+      "dataset": "maintenance",
+      "check": "missing_values",
+      "column": "resolution",
+      "count": 64,
+      "details": "Null, blank or recognized placeholder values."
+    },
+    {
+      "dataset": "maintenance",
+      "check": "inconsistent_category_format",
+      "column": "resolution",
+      "count": 1,
+      "details": "Different raw values share the same trimmed, lowercase representation."
+    },
+    {
+      "dataset": "maintenance",
+      "column": "repair_minutes",
+      "issue": "missing_value",
+      "count": 5,
+      "rules": {
+        "min": 0
+      }
+    },
+    {
+      "dataset": "maintenance",
+      "column": "repair_minutes",
+      "issue": "malformed_numeric_value",
+      "count": 4,
+      "rules": {
+        "min": 0
+      }
+    },
+    {
+      "dataset": "trips",
+      "check": "unmatched_reference",
+      "column": "start_station_id",
+      "count": 1,
+      "details": "Some values do not exist in stations.station_id."
+    },
+    {
+      "dataset": "maintenance",
+      "check": "unmatched_reference",
+      "column": "bike_id",
+      "count": 1,
+      "details": "Some values do not exist in bikes.bike_id."
+    }
+  ]
+}
